@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendaftaran Turnamen ML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 40px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 6px;
+      background: #334155;
+      color: #fff;
+    }
+    input[type="file"] {
+      padding: 8px;
+      background: #1e293b;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background-color: #3b82f6;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Pendaftaran Turnamen Mobile Legends</h2>
+    
+    <form action="proses_pendaftaran.php" method="POST" enctype="multipart/form-data">
+      <label for="nama_team">Nama Tim</label>
+      <input type="text" id="nama_team" name="nama_team" required>
+
+      <label for="kapten">Nama Kapten</label>
+      <input type="text" id="kapten" name="kapten" required>
+
+      <label for="no_hp">No WhatsApp Kapten</label>
+      <input type="tel" id="no_hp" name="no_hp" required>
+
+      <label for="anggota">Daftar Anggota (4-5 orang)</label>
+      <textarea id="anggota" name="anggota" rows="4" required></textarea>
+
+      <label for="kategori">Kategori</label>
+      <select id="kategori" name="kategori" required>
+        <option value="">-- Pilih Kategori --</option>
+        <option value="Umum">Umum</option>
+        <option value="Pelajar">Pelajar</option>
+      </select>
+
+      <label for="metode_pembayaran">Metode Pembayaran</label>
+      <select id="metode_pembayaran" name="metode_pembayaran" required>
+        <option value="">-- Pilih Metode --</option>
+        <option value="GoPay">GoPay</option>
+        <option value="Dana">Dana</option>
+        <option value="OVO">OVO</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+      </select>
+
+      <label for="bukti">Upload Screenshot Bukti Pembayaran</label>
+      <input type="file" id="bukti" name="bukti" accept=".jpg, .jpeg, .png" required>
+
+      <!-- ...existing code... -->
+      <button type="submit">Daftar Sekarang</button>
+    </form>
+    <div style="text-align:center; margin-top:20px;">
+      <a href="https://yrl.link/" target="_blank" style="color:#3b82f6; text-decoration:underline; font-weight:bold;">
+        Kunjungi URL YRL
+      </a>
+    </div>
+  </div>
